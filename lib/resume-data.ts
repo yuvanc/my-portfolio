@@ -17,6 +17,7 @@ interface Experience {
 interface ResumeData {
   name: string;
   title: string;
+  subtitle: string;
   education: Education[];
   experience: Experience[];
   skills: {
@@ -31,7 +32,8 @@ interface ResumeData {
 // This is the "data object" I was referring to
 export const resumeData: ResumeData = {
   name: "Yuvan Chugh",
-  title: "CS @ Cornell | AI/ML Researcher",
+  title: "CS @ Cornell | AI/ML Researcher @ Interplay Research Lab",
+  subtitle: "ex - AI & NLP @ Yellow.AI, Allianz, Avendus (KKR-backed), Bold Penguin, ICICI",
 
   education: [
     {

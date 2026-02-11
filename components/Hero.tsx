@@ -14,20 +14,24 @@ export default function Hero() {
           {resumeData.name}
         </h1>
 
-        <p className="text-xl text-gray-400 mb-8">
+        <p className="text-xl text-white mb-8">
           {resumeData.title}
+        </p>
+
+        <p className="text-xl text-gray-400 mb-8">
+          {resumeData.subtitle}
         </p>
 
         <div className="flex gap-4 justify-center">
           <a
             href="#experience"
-            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors"
           >
             View My Work
           </a>
           <a
             href="/resume.pdf"
-            className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors"
           >
             Download Resume
           </a>
