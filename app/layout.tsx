@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Your Name | Portfolio",
+  title: "Yuvan Chugh | Portfolio",
   description: "AI/ML Researcher and Software Engineer",
 }
 
