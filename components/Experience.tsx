@@ -1,4 +1,7 @@
+"use client"
+
 import { resumeData } from "@/lib/resume-data"
+import Image from "next/image"
 
 export default function Experience() {
   return (
@@ -17,16 +20,29 @@ export default function Experience() {
               className="border-l-2 border-indigo-600 pl-6"
             >
 
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-                <h3 className="text-lg font-semibold text-white">
-                  {exp.company}
-                </h3>
-                <span className="text-sm text-gray-500">
-                  {exp.period}
-                </span>
+              <div className="flex items-start gap-3 mb-1">
+                <div className="w-8 h-8 relative rounded bg-white flex items-center justify-center shrink-0 overflow-hidden border border-gray-700">
+                  <Image
+                    src={`https://www.google.com/s2/favicons?domain=${exp.domain}&sz=64`}
+                    alt={`${exp.company} logo`}
+                    fill
+                    className="object-contain p-1"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none"
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between flex-1">
+                  <h3 className="text-lg font-semibold text-white">
+                    {exp.company}
+                  </h3>
+                  <span className="text-sm text-gray-500">
+                    {exp.period}
+                  </span>
+                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 pl-11">
                 <p className="text-indigo-400 font-medium">
                   {exp.role}
                 </p>
@@ -35,7 +51,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2 pl-11">
                 {exp.bullets.map((bullet, index) => (
                   <li
                     key={index}
