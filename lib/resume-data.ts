@@ -29,7 +29,7 @@ interface ResumeData {
 // Then, create the actual data object typed as ResumeData
 // This is the "data object" I was referring to
 export const resumeData: ResumeData = {
-  name: "Your Name",
+  name: "Yuvan Chugh",
   title: "CS @ Cornell | AI/ML Researcher",
 
   education: [
